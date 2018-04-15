@@ -15,8 +15,9 @@ public class XueqiuTest {
     @BeforeClass
     public static void xueqiulogin(){
         useRelaxedHTTPSValidation();
-        RestAssured.proxy("http://192.168.31.37:8888");
+      //  RestAssured.proxy("http://192.168.31.37:8888");
         response=given()
+                .log().all()
                 .header("User-Agent","Xueqiu Android 10.3.1")
                 .queryParam("_t","1GENYMOTION749fb879303860c8756800945bafeb27.8583398334.1523777043177.1523777071452")
                 .queryParam("_s","e23897")
@@ -54,7 +55,7 @@ public class XueqiuTest {
     }
 
 
-    @Test
+
     public void testSearch(){
 
         given()

@@ -23,6 +23,6 @@ public class DemoTest {
     @Test
     public void testhomeSearch(){
         useRelaxedHTTPSValidation();
-        given().queryParam("q","test").when().get("https://testerhome.com/search").then().log().all().statusCode(200);
+        given().queryParam("q","test").when().get("https://testerhome.com/search").then().statusCode(200);
     }
 }
