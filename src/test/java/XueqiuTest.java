@@ -55,7 +55,7 @@ public class XueqiuTest {
     }
 
 
-
+    @Test
     public void testSearch(){
 
         given()
